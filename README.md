@@ -1,56 +1,101 @@
-# 🐍 Python From Zero
+# ⚙️ Python — Algorithms & Libraries
 
-> Learning Python from scratch — one concept at a time
+> Mastering DSA + top Python libraries with hands-on notebooks
 
-![Beginner Friendly](https://img.shields.io/badge/Level-Beginner%20Friendly-green)
-![Python](https://img.shields.io/badge/Python-3.x-blue)
+![Algorithms](https://img.shields.io/badge/Topic-Algorithms%20%26%20DSA-purple)
+![Libraries](https://img.shields.io/badge/Libraries-NumPy%20%7C%20Pandas%20%7C%20Matplotlib-blue)
+![Python](https://img.shields.io/badge/Python-3.x-green)
 ![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
 
 ---
 
-## 📖 About
+## 📌 About
 
-This repository documents my personal journey of learning Python from absolute basics. Every folder contains notes, exercises, and mini-projects built while following tutorials and books.
+This repository is a complete reference for learning Python algorithms and its most important libraries — all in one place. Every topic has a dedicated Jupyter notebook with explanations, visual examples, and practice problems.
 
-If you're also starting out, feel free to follow along, ⭐ star the repo, or open an issue to chat!
+Two tracks run in parallel:
+- **DSA Track** — Algorithms and Data Structures from scratch
+- **Library Track** — NumPy, Pandas, Matplotlib, Seaborn, SciPy
 
 ```python
-print("Hello, World!")
-# My Python journey starts here 🚀
+import numpy as np
+
+my_list = [64, 34, 25, 12, 22, 11, 90]
+
+# Bubble sort — manual implementation
+for i in range(len(my_list)):
+    for j in range(0, len(my_list)-i-1):
+        if my_list[j] > my_list[j+1]:
+            my_list[j], my_list[j+1] = my_list[j+1], my_list[j]
+
+# NumPy way — 1 line!
+sorted_arr = np.sort(np.array(my_list))
 ```
 
 ---
 
-## 📚 Topics Covered
+## 🔃 Algorithms Covered
 
-| # | Topic | Status |
-|---|-------|--------|
-| 01 | Variables & Data Types | ✅ Done |
-| 02 | Strings | ✅ Done |
-| 03 | Lists & Tuples | ✅ Done |
-| 04 | Dictionaries | ✅ Done |
-| 05 | Conditionals | ✅ Done |
-| 06 | Loops | ✅ Done |
-| 07 | Functions | ✅ Done |
-| 08 | Object-Oriented Programming | 🔄 Coming Soon |
+### Sorting
+`Bubble Sort` `Selection Sort` `Insertion Sort` `Merge Sort` `Quick Sort` `Heap Sort` `Counting Sort`
+
+### Searching
+`Linear Search` `Binary Search` `Jump Search` `Interpolation Search`
+
+### Data Structures
+`Arrays` `Linked List` `Stack` `Queue` `Hash Table` `Binary Tree` `BST` `Graphs`
+
+### Problem Solving Techniques
+`Recursion` `Two Pointers` `Sliding Window` `Dynamic Programming` `Greedy` `Backtracking` `BFS / DFS`
 
 ---
 
-## 🚀 Getting Started
+## 📦 Libraries Covered
+
+| Library | Topics |
+|---------|--------|
+| **NumPy** | Arrays, matrix ops, linear algebra, broadcasting, random |
+| **Pandas** | DataFrames, Series, groupby, merge, data cleaning, CSV/Excel |
+| **Matplotlib** | Line, bar, scatter, pie charts, subplots, custom styling |
+| **Seaborn** | Statistical plots, heatmaps, pairplots, distribution charts |
+| **SciPy** | Scientific computing, optimization, signal processing, stats |
+| **Collections / itertools** | Counter, deque, defaultdict, combinations |
+
+---
+
+## 📊 Progress Tracker
+
+| Topic | Progress |
+|-------|----------|
+| Bubble / Selection Sort | ✅ 100% |
+| Merge Sort / Quick Sort | 🔄 80% |
+| Binary Search | ✅ 100% |
+| Linked List & Stack | 🔄 70% |
+| Trees & Graphs | 🔄 30% |
+| Dynamic Programming | ⏳ 15% |
+| NumPy | 🔄 90% |
+| Pandas | 🔄 65% |
+| Matplotlib / Seaborn | 🔄 50% |
+| SciPy | ⏳ 10% |
+
+---
+
+## 🚀 Setup
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/your-username/python-from-zero
+git clone https://github.com/your-username/python-algo-libs
+cd python-algo-libs
 
-# 2. Move into the folder
-cd python-from-zero
+# 2. Create a virtual environment
+python3 -m venv venv
+source venv/bin/activate   # Windows: venv\Scripts\activate
 
-# 3. Run any script
-python3 basics/hello_world.py
+# 3. Install all libraries
+pip install -r requirements.txt
+
+# 4. Open Jupyter
+jupyter lab
 ```
 
-> Requires **Python 3.8+**. No extra libraries needed for the basics.
-
----
-
-## 📁 Folder Structure
+**requirements.txt**
